@@ -238,7 +238,7 @@
 
             <div id="loading-box" class="mini-loader">
                 <div class="spinner"></div>
-                </br>
+                <br>
                 <span style="font-size: 14px; color: var(--primary); font-weight: 600; margin-left: 8px;">অপেক্ষা করুন লোড হচ্ছে...</span>
             </div>
 
@@ -291,6 +291,13 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // ফোনের ব্যাক বাটন ক্লিক হ্যান্ডেল (ব্রাউজার থেকে বের হওয়া আটকাবে)
+        window.onpopstate = function() {
+            resetAndHome();
+            // ব্যাক করার পর আবার স্টেট পুশ করা যাতে বার বার কাজ করে
+            history.pushState(null, null, window.location.pathname);
+        };
+
         function createSkeletons() {
             const grids = document.querySelectorAll('.product-grid');
             grids.forEach(grid => {
@@ -339,7 +346,6 @@
                     if (data[key].length > 4 && btn) btn.style.display = "block";
                 });
                 
-                // লোড শেষ হলে লোডার ডিলিট হবে
                 document.getElementById('loading-box').remove();
 
             } catch (e) { 
@@ -387,6 +393,8 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
+            // লোড হওয়ার সাথে সাথেই একটি স্টেট পুশ করা যাতে ব্যাক প্রেস করলে বের না হয়
+            history.pushState(null, null, window.location.pathname);
             createSkeletons();
             loadData();
         });
