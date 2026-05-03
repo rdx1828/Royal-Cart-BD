@@ -150,6 +150,11 @@
         .messenger { background: var(--messenger); }
         .facebook { background: var(--facebook); }
 
+        /* লোডার অ্যানিমেশন */
+        .mini-loader { text-align: center; padding: 10px; margin: 10px 0; }
+        .spinner { width: 20px; height: 20px; border: 3px solid #f3f3f3; border-top: 3px solid var(--accent); border-radius: 50%; display: inline-block; animation: spin 0.8s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
         .group-card {
             background: linear-gradient(135deg, #1e293b, #334155);
             color: white; padding: 16px; border-radius: 15px;
@@ -229,6 +234,12 @@
                         <a href="https://www.facebook.com/share/1Dvx7wJxTf/" target="_blank" class="social-btn facebook"><i class="fab fa-facebook"></i> Facebook</a>
                     </div>
                 </div>
+            </div>
+
+            <div id="loading-box" class="mini-loader">
+                <div class="spinner"></div>
+                </br>
+                <span style="font-size: 14px; color: var(--primary); font-weight: 600; margin-left: 8px;">অপেক্ষা করুন লোড হচ্ছে...</span>
             </div>
 
             <div class="group-card">👦 ছেলেদের কালেকশন</div>
@@ -327,7 +338,14 @@
                     grid.innerHTML = gridHtml;
                     if (data[key].length > 4 && btn) btn.style.display = "block";
                 });
-            } catch (e) { console.error("Error loading data:", e); }
+                
+                // লোড শেষ হলে লোডার ডিলিট হবে
+                document.getElementById('loading-box').remove();
+
+            } catch (e) { 
+                console.error("Error loading data:", e); 
+                document.getElementById('loading-box').innerHTML = "সমস্যা হয়েছে, পুনরায় চেষ্টা করুন।";
+            }
         }
 
         function toggleSection(gridId) {
