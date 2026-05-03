@@ -1,0 +1,16 @@
+# ==========================================
+# Robots.txt for Royal Cart BD
+# Optimized for Google, Bing, and Social Media
+# ==========================================
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+
+# এসইও বুস্ট করার জন্য সাইটম্যাপের সঠিক পাথ
+Sitemap: https://rdx1828.github.io/Royal-Cart-BD/sitemap.xml
+
+# গুগলের জন্য বিশেষ নির্দেশনা
+User-agent: Googlebot
+Allow: /
