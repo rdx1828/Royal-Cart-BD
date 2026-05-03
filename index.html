@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Cart BD | Premium Shopping</title>
+
+    <meta name="description" content="Royal Cart BD - বাংলাদেশের সেরা প্রিমিয়াম অনলাইন শপিং গন্তব্য। ছেলেদের এবং মেয়েদের লেটেস্ট ফ্যাশন কালেকশন, ঘড়ি এবং বাচ্চাদের খেলনা কিনুন সাশ্রয়ী মূল্যে।">
+    <meta name="keywords" content="Royal Cart BD, online shopping Bangladesh, premium clothing, men's fashion, women's fashion, kids toys, online watch shop BD">
+    <meta name="author" content="RAFID AHAMMED">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://royalcartbd.site">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://royalcartbd.site">
+    <meta property="og:title" content="Royal Cart BD | প্রিমিয়াম শপিং অভিজ্ঞতা">
+    <meta property="og:description" content="ঈদের নতুন কালেকশন এখন লাইভ! সেরা মানের পাঞ্জাবি, টি-শার্ট এবং ঘড়ি কিনুন Royal Cart BD থেকে।">
+    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Royal Cart BD | Premium Shopping">
+    <meta name="twitter:description" content="সেরা মানের প্রিমিয়াম পণ্য নিয়ে আপনার পাশে Royal Cart BD।">
+    <meta name="twitter:image" content="og-image.jpg">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Cinzel:wght@700;900&family=Playfair+Display:wght@700;900&display=swap');
+        
+        :root {
+            --primary: #0f172a;
+            --accent: #4f46e5;
+            --bg: #f8fafc;
+            --whatsapp: #25D366;
+            --messenger: #0084FF;
+            --facebook: #1877F2;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--primary);
+            scroll-behavior: smooth;
+        }
+
+        /* Fixed Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #ffffff;
+            padding: 12px 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-bottom: 3px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 15px;
+            font-size: 24px;
+            color: var(--accent);
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-family: 'Cinzel', serif;
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #4f46e5, #9333ea, #4f46e5);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+            text-transform: uppercase;
+        }
+
+        @keyframes shine { to { background-position: 200% center; } }
+
+        /* মারকিউ নোটিশ বোর্ড (নতুন সংযোজন) */
+        .notice-board {
+            margin-top: 75px; /* হেডারের নিচে জায়গা রাখার জন্য */
+            background: linear-gradient(90deg, #4f46e5, #9333ea);
+            color: white;
+            padding: 8px 0;
+            font-size: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .notice-board marquee {
+            display: block;
+            width: 100%;
+        }
+
+        .main-content { margin-top: 10px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 15px; }
+
+        .delivery-notice {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .delivery-notice h3 { margin: 0 0 10px; color: var(--accent); font-size: 20px; }
+        .delivery-notice .charge-info { font-weight: 700; color: #1e293b; font-size: 16px; margin-bottom: 15px; display: block; }
+        
+        .order-box {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 6px solid var(--accent);
+        }
+        .order-box h4 { margin: 0 0 10px; font-size: 18px; color: #ef4444; font-weight: 800; }
+        .order-box p { margin: 0 0 15px; font-weight: 600; color: #334155; line-height: 1.5; }
+        
+        .social-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .social-btn {
+            display: flex; align-items: center; gap: 8px; padding: 10px 20px;
+            border-radius: 50px; text-decoration: none; color: white; font-weight: 700; font-size: 14px; transition: 0.3s;
+        }
+        .whatsapp { background: var(--whatsapp); }
+        .messenger { background: var(--messenger); }
+        .facebook { background: var(--facebook); }
+
+        .group-card {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white; padding: 16px; border-radius: 15px;
+            margin: 35px 0 15px; text-align: center; font-size: 20px; font-weight: 700;
+        }
+
+        .section-header {
+            font-size: 18px; font-weight: 700; color: #1e293b;
+            margin: 25px 0 15px; border-left: 5px solid var(--accent); padding-left: 12px;
+        }
+
+        .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 10px; }
+
+        @media (min-width: 768px) {
+            .product-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+
+        .show-more-btn {
+            display: block; margin: 15px auto 35px; padding: 10px 25px;
+            background: transparent; color: var(--accent); border: 2px solid var(--accent);
+            border-radius: 50px; font-weight: 700; cursor: pointer; transition: 0.3s;
+        }
+
+        .card { background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: none; }
+        .preview-box { width: 100%; aspect-ratio: 3/4; position: relative; background: #f1f5f9; }
+        .preview-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        .lightbox {
+            display: none; position: fixed; z-index: 2000; top: 0; left: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.95);
+            justify-content: center; align-items: center;
+        }
+        .lightbox img { max-width: 90%; max-height: 85vh; border-radius: 10px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+        
+        .close-lightbox {
+            position: absolute; top: 30px; right: 25px; color: white;
+            font-size: 45px; cursor: pointer; z-index: 2100; background: rgba(255, 255, 255, 0.2);
+            width: 60px; height: 60px; display: flex; align-items: center;
+            justify-content: center; border-radius: 50%; border: 2px solid rgba(255,255,255,0.5);
+            transition: 0.3s;
+        }
+
+        .skeleton { width: 100%; aspect-ratio: 3/4; background: #e2e8f0; border-radius: 15px; }
+        .footer { text-align: center; padding: 30px; color: #64748b; font-size: 14px; border-top: 1px solid #e2e8f0; }
+        .video-overlay {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: rgba(79, 70, 229, 0.9); color: white; border-radius: 50%;
+            width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;
+        }
+        video { width: 100%; height: 100%; object-fit: cover; display: none; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="back-btn" onclick="resetAndHome()"><i class="fas fa-arrow-left"></i></div>
+        <h1 class="animate__animated animate__pulse animate__infinite">Royal Cart BD</h1>
+    </header>
+
+    <div class="notice-board">
+        <marquee scrollamount="6">
+            🎉 আনন্দের সাথে জানাচ্ছি যে, **Royal Cart BD**-তে ঈদের একদম নতুন কালেকশন চলে এসেছে। &nbsp;&nbsp;&nbsp;&nbsp; ✨ এক্সক্লুসিভ নতুন কালেকশনগুলো দেখতে আমাদের **জেনারেল কালেকশন** সেকশনটি ঘুরে দেখুন। &nbsp;&nbsp;&nbsp;&nbsp; 🛍️ শুভ শপিং!
+        </marquee>
+    </div>
+
+    <div class="main-content" id="top">
+        <div class="container">
+            <div class="delivery-notice animate__animated animate__fadeIn">
+                <h3>📢 ডেলিভারি সংক্রান্ত তথ্য</h3>
+                <span class="charge-info">ঢাকার মধ্যে ডেলিভারি চার্জ ৳৫০ এবং সারা বাংলাদেশে ৳১০০</span>
+                <div class="order-box">
+                    <h4>পণ্যগুলোর দাম এবং অর্ডার করার নিয়ম জানতে:</h4>
+                    <p>আপনার পছন্দের পণ্যটির একটি স্ক্রিনশট (Screenshot) নিন এবং নিচের যেকোনো মাধ্যমে আমাদের ছবি পাঠিয়ে মেসেজ দিন।</p>
+                    <div class="social-buttons">
+                        <a href="https://api.whatsapp.com/send/?phone=8801906818233" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://m.me/rafid23" target="_blank" class="social-btn messenger"><i class="fab fa-facebook-messenger"></i> Messenger</a>
+                        <a href="https://www.facebook.com/share/1Dvx7wJxTf/" target="_blank" class="social-btn facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-card">👦 ছেলেদের কালেকশন</div>
+            <div class="section-header">ড্রপ শোল্ডার টি-শার্ট</div><div id="cat1" class="product-grid"></div><button id="btn-cat1" class="show-more-btn" style="display:none;" onclick="toggleSection('cat1')">আরও দেখুন</button>
+            <div class="section-header">পোলো টি-শার্ট</div><div id="cat2" class="product-grid"></div><button id="btn-cat2" class="show-more-btn" style="display:none;" onclick="toggleSection('cat2')">আরও দেখুন</button>
+            <div class="section-header">স্লিম ফিট টি-শার্ট</div><div id="cat3" class="product-grid"></div><button id="btn-cat3" class="show-more-btn" style="display:none;" onclick="toggleSection('cat3')">আরও দেখুন</button>
+            <div class="section-header">কম্বো প্যাক</div><div id="cat4" class="product-grid"></div><button id="btn-cat4" class="show-more-btn" style="display:none;" onclick="toggleSection('cat4')">আরও দেখুন</button>
+            <div class="section-header">ছেলের ঘড়ি</div><div id="cat5" class="product-grid"></div><button id="btn-cat5" class="show-more-btn" style="display:none;" onclick="toggleSection('cat5')">আরও দেখুন</button>
+
+            <div class="group-card">💃 মেয়েদের কালেকশন</div>
+            <div class="section-header">থ্রি-পিস</div><div id="cat7" class="product-grid"></div><button id="btn-cat7" class="show-more-btn" style="display:none;" onclick="toggleSection('cat7')">আরও দেখুন</button>
+            <div class="section-header">হ্যান্ডব্যাগ</div><div id="cat8" class="product-grid"></div><button id="btn-cat8" class="show-more-btn" style="display:none;" onclick="toggleSection('cat8')">আরও দেখুন</button>
+            <div class="section-header">মেয়েদের ঘড়ি</div><div id="cat9" class="product-grid"></div><button id="btn-cat9" class="show-more-btn" style="display:none;" onclick="toggleSection('cat9')">আরও দেখুন</button>
+            <div class="section-header">মেয়েদের কম্বো</div><div id="cat10" class="product-grid"></div><button id="btn-cat10" class="show-more-btn" style="display:none;" onclick="toggleSection('cat10')">আরও দেখুন</button>
+            <div class="section-header">শাড়ি</div><div id="cat11" class="product-grid"></div><button id="btn-cat11" class="show-more-btn" style="display:none;" onclick="toggleSection('cat11')">আরও দেখুন</button>
+
+            <div class="group-card">🧸 বাচ্চাদের সেকশন</div>
+            <div class="section-header">বাচ্চাদের খেলনা</div><div id="cat6" class="product-grid"></div><button id="btn-cat6" class="show-more-btn" style="display:none;" onclick="toggleSection('cat6')">আরও দেখুন</button>
+
+            <div class="group-card">✨ অন্যান্য</div>
+            <div class="section-header">জেনারেল কালেকশন</div><div id="cat12" class="product-grid"></div><button id="btn-cat12" class="show-more-btn" style="display:none;" onclick="toggleSection('cat12')">আরও দেখুন</button>
+
+            <div class="group-card" style="background: #ef4444;">🎬 ভিডিও গ্যালারি</div>
+            <div id="video_all" class="product-grid"></div><button id="btn-video_all" class="show-more-btn" style="display:none;" onclick="toggleSection('video_all')">আরও দেখুন</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2026 <b>Royal Cart BD</b> | Designed by <b>RAFID AHAMMED</b>
+    </footer>
+
+    <div id="imageLightbox" class="lightbox">
+        <div class="close-lightbox" onclick="closeLightbox()">&times;</div>
+        <img id="fullImage" src="" alt="Full view">
+    </div>
+
+    <script>
+        const webAppUrl = "https://script.google.com/macros/s/AKfycbzpFoI3oXgsRyTmLbPjJ1munAP7P9KDmi5w8jyvJSCmiSCdK81bHjLzw0BFNQGfeEx7/exec";
+
+        function resetAndHome() {
+            document.querySelectorAll('.show-more-btn').forEach(btn => {
+                if (btn.innerText === "কম দেখুন") {
+                    const gridId = btn.id.replace('btn-', '');
+                    const extraItems = document.getElementById(gridId).querySelectorAll('.extra-item');
+                    extraItems.forEach(item => { item.style.display = "none"; });
+                    btn.innerText = "আরও দেখুন";
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function createSkeletons() {
+            const grids = document.querySelectorAll('.product-grid');
+            grids.forEach(grid => {
+                let html = '';
+                for(let i=0; i<4; i++) html += '<div class="skeleton"></div>';
+                grid.innerHTML = html;
+            });
+        }
+
+        async function loadData() {
+            try {
+                const response = await fetch(webAppUrl);
+                const data = await response.json();
+                
+                Object.keys(data).forEach(key => {
+                    const grid = document.getElementById(key);
+                    const btn = document.getElementById('btn-' + key);
+                    if (!grid) return;
+                    
+                    let gridHtml = "";
+                    data[key].forEach((item, index) => {
+                        const thumb = `https://drive.google.com/thumbnail?id=${item.id}&sz=w800`;
+                        const isExtra = index >= 4;
+                        const displayStyle = isExtra ? 'none' : 'block';
+                        const extraClass = isExtra ? 'extra-item' : '';
+                        
+                        if (item.type.includes("image")) {
+                            gridHtml += `<div class="card ${extraClass}" style="display:${displayStyle}" onclick="openLightbox('${thumb}')">
+                                <div class="preview-box">
+                                    <img src="${thumb}" loading="lazy" alt="Product">
+                                </div>
+                            </div>`;
+                        } else {
+                            const videoUrl = `https://drive.google.com/uc?export=download&id=${item.id}`;
+                            gridHtml += `<div class="card ${extraClass}" style="display:${displayStyle}">
+                                <div class="preview-box" onclick="playVideo(this)">
+                                    <div class="video-overlay">▶</div>
+                                    <img src="${thumb}" loading="lazy">
+                                    <video controls preload="none"><source src="${videoUrl}" type="${item.type}"></video>
+                                </div>
+                            </div>`;
+                        }
+                    });
+                    
+                    grid.innerHTML = gridHtml;
+                    if (data[key].length > 4 && btn) btn.style.display = "block";
+                });
+            } catch (e) { console.error("Error loading data:", e); }
+        }
+
+        function toggleSection(gridId) {
+            const grid = document.getElementById(gridId);
+            const btn = document.getElementById('btn-' + gridId);
+            const extraItems = grid.querySelectorAll('.extra-item');
+            
+            if (btn.innerText === "আরও দেখুন") {
+                extraItems.forEach(item => {
+                    item.style.display = "block";
+                    item.classList.add('animate__animated', 'animate__fadeInUp');
+                });
+                btn.innerText = "কম দেখুন";
+            } else {
+                extraItems.forEach(item => item.style.display = "none");
+                btn.innerText = "আরও দেখুন";
+                grid.previousElementSibling.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function openLightbox(url) {
+            const lb = document.getElementById('imageLightbox');
+            document.getElementById('fullImage').src = url;
+            lb.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('imageLightbox').style.display = 'none';
+        }
+        
+        function playVideo(box) {
+            const video = box.querySelector('video');
+            const img = box.querySelector('img');
+            const overlay = box.querySelector('.video-overlay');
+            img.style.display = 'none';
+            overlay.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            createSkeletons();
+            loadData();
+        });
+    </script>
+</body>
+</html>
