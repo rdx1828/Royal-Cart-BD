@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রতারকদের তালিকা | Royal Cart BD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Cinzel:wght@900&display=swap');
+        
+        body { font-family: 'Hind Siliguri', sans-serif; background-color: #f8fafc; margin: 0; padding: 0; }
+        
+        .header { background: white; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; border-bottom: 3px solid #ef4444; }
+        .header h1 { margin: 0; font-family: 'Cinzel', serif; color: #ef4444; font-size: 24px; }
+        
+        .container { max-width: 800px; margin: 20px auto; padding: 15px; }
+        
+        .search-container { margin-bottom: 25px; }
+        .search-box { width: 100%; padding: 12px 20px; border-radius: 50px; border: 2px solid #ddd; box-sizing: border-box; font-size: 16px; outline: none; transition: 0.3s; }
+        .search-box:focus { border-color: #ef4444; }
+
+        .fraud-card {
+            background: white; border-radius: 15px; padding: 15px; margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid #ef4444;
+            display: flex; align-items: center; gap: 15px;
+        }
+        
+        .fraud-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #ef4444; background: #eee; }
+        
+        .fraud-info { flex-grow: 1; }
+        .fraud-info h4 { margin: 0 0 5px; color: #1e293b; font-size: 18px; }
+        .fraud-info p { margin: 2px 0; color: #64748b; font-size: 14px; }
+        .status-badge { background: #fee2e2; color: #ef4444; padding: 2px 10px; border-radius: 50px; font-size: 12px; font-weight: 700; }
+
+        .loading-text { text-align: center; color: #64748b; margin-top: 20px; }
+        .back-home { display: block; text-align: center; margin: 30px 0; color: #4f46e5; text-decoration: none; font-weight: 700; }
+        
+        @media (max-width: 480px) {
+            .fraud-card { flex-direction: column; text-align: center; }
+            .fraud-img { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1><i class="fas fa-user-secret"></i> BLACKLISTED FRAUDSTERS</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-box" placeholder="নাম বা ফোন নম্বর লিখে সার্চ করুন..." onkeyup="searchFraud()">
+        </div>
+
+        <div id="fraudList">
+            <p class="loading-text">তথ্য লোড হচ্ছে, দয়া করে অপেক্ষা করুন...</p>
+        </div>
+
+        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> মূল ওয়েবসাইটে ফিরে যান</a>
+    </div>
+
+    <script>
+        let allFrauds = [];
+        // আপনার দেয়া নতুন CSV লিঙ্কটি এখানে আপডেট করা হয়েছে
+        const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRMk3iRDqjZUk29tadGir8ZSpDxw4sVfzXk72Nop_U9MsfsjBYN8d5suSLxtcxWWnba2adM8F6MmRYz/pub?gid=0&single=true&output=csv";
+
+        async function fetchFraudData() {
+            try {
+                const response = await fetch(csvUrl);
+                const data = await response.text();
+                
+                // CSV ডাটাকে ভেঙে লিস্টে রূপান্তর
+                const rows = data.split('\n').map(row => row.trim()).filter(row => row !== "");
+                
+                // প্রথম সারি বাদ দিয়ে ডাটা সাজানো
+                allFrauds = rows.slice(1).map(row => {
+                    const columns = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                    return {
+                        name: columns[0]?.replace(/"/g, '').trim() || "অজ্ঞাত",
+                        phone: columns[1]?.replace(/"/g, '').trim() || "",
+                        address: columns[2]?.replace(/"/g, '').trim() || "ঠিকানা নেই",
+                        reason: columns[3]?.replace(/"/g, '').trim() || "কারণ উল্লেখ নেই",
+                        image: columns[4]?.replace(/"/g, '').trim() || "https://via.placeholder.com/100"
+                    };
+                }).filter(item => item.phone !== "");
+
+                displayFrauds(allFrauds);
+            } catch (error) {
+                document.getElementById('fraudList').innerHTML = "<p class='loading-text'>গুগল শিট থেকে তথ্য পাওয়া যাচ্ছে না। লিঙ্ক বা ইন্টারনেট চেক করুন।</p>";
+            }
+        }
+
+        function displayFrauds(data) {
+            const listDiv = document.getElementById('fraudList');
+            listDiv.innerHTML = "";
+
+            if(data.length === 0) {
+                listDiv.innerHTML = "<p class='loading-text'>কোনো রেকর্ড পাওয়া যায়নি।</p>";
+                return;
+            }
+
+            data.forEach(item => {
+                listDiv.innerHTML += `
+                    <div class="fraud-card animate__animated animate__fadeIn">
+                        <img src="${item.image}" class="fraud-img" alt="Photo" onerror="this.src='https://via.placeholder.com/100'">
+                        <div class="fraud-info">
+                            <h4>নাম: ${item.name} <span class="status-badge">প্রতারক</span></h4>
+                            <p><strong><i class="fas fa-phone"></i> ফোন:</strong> ${item.phone}</p>
+                            <p><strong><i class="fas fa-map-marker-alt"></i> ঠিকানা:</strong> ${item.address}</p>
+                            <p><strong><i class="fas fa-exclamation-circle"></i> কারণ:</strong> ${item.reason}</p>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function searchFraud() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const filteredData = allFrauds.filter(fraud => 
+                fraud.phone.includes(input) || fraud.name.toLowerCase().includes(input)
+            );
+            displayFrauds(filteredData);
+        }
+
+        window.onload = fetchFraudData;
+    </script>
+
+</body>
+</html>
