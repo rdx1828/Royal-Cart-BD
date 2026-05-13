@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Cart BD | Premium Shopping</title>
 
-    <meta name="description" content="Royal Cart BD - বাংলাদেশের সেরা প্রিমিয়াম অনলাইন শপিং গন্তব্য। ছেলেদের এবং মেয়েদের লেটেস্ট ফ্যাশন কালেকশন, ঘড়ি এবং বাচ্চাদের খেলনা কিনুন সাশ্রয়ী মূল্যে।">
+    <meta name="description" content="Royal Cart BD - বাংলাদেশের সেরা প্রিমিয়াম অনলাইন শপিং গন্তব্য। ছেলেদের এবং মেয়েদের লেটেস্ট ফ্যাশন কালেকশন, ঘড়ি এবং বাচ্চাদের খেলনা কিনুন সাশ্রয়ী মূল্যে।">
     <meta name="keywords" content="Royal Cart BD, online shopping Bangladesh, premium clothing, men's fashion, women's fashion, kids toys, online watch shop BD">
     <meta name="author" content="RAFID AHAMMED">
     <meta name="robots" content="index, follow">
@@ -21,15 +21,15 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rdx1828.github.io/Royal-Cart-BD/">
-    <meta property="og:title" content="Royal Cart BD | প্রিমিয়াম শপিং অভিজ্ঞতা">
-    <meta property="og:description" content="ঈদের নতুন কালেকশন এখন লাইভ! সেরা মানের পাঞ্জাবি, টি-শার্ট এবং ঘড়ি কিনুন Royal Cart BD থেকে।">
+    <meta property="og:title" content="Royal Cart BD | প্রিমিয়াম শপিং অভিজ্ঞতা">
+    <meta property="og:description" content="ঈদের নতুন কালেকশন এখন লাইভ! সেরা মানের পাঞ্জাবি, টি-শার্ট এবং ঘড়ি কিনুন Royal Cart BD থেকে।">
     <meta property="og:image" content="og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Royal Cart BD | Premium Shopping">
-    <meta name="twitter:description" content="সেরা মানের প্রিমিয়াম পণ্য নিয়ে আপনার পাশে Royal Cart BD।">
+    <meta name="twitter:description" content="সেরা মানের প্রিমিয়াম পণ্য নিয়ে আপনার পাশে Royal Cart BD।">
     <meta name="twitter:image" content="og-image.jpg">
 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -200,15 +200,26 @@
         }
 
         .card { background: white; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: none; }
+        
+        /* অপটিমাইজেশন: লং-প্রেস সাপোর্ট যুক্ত করা হয়েছে */
         .preview-box { width: 100%; aspect-ratio: 3/4; position: relative; background: #f1f5f9; }
-        .preview-box img { width: 100%; height: 100%; object-fit: cover; }
+        .preview-box img { 
+            width: 100%; height: 100%; object-fit: cover; 
+            -webkit-touch-callout: default !important; /* লং প্রেস ডাউনলোডের জন্য */
+            user-select: auto !important;
+        }
 
         .lightbox {
             display: none; position: fixed; z-index: 2000; top: 0; left: 0;
             width: 100%; height: 100%; background: rgba(0,0,0,0.95);
             justify-content: center; align-items: center;
         }
-        .lightbox img { max-width: 90%; max-height: 85vh; border-radius: 10px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+        /* অপটিমাইজেশন: লাইটবক্সের ছবিতে লং-প্রেস সাপোর্ট */
+        .lightbox img { 
+            max-width: 90%; max-height: 85vh; border-radius: 10px; box-shadow: 0 0 30px rgba(0,0,0,0.5); 
+            -webkit-touch-callout: default !important; 
+            user-select: auto !important;
+        }
         
         .close-lightbox {
             position: absolute; top: 30px; right: 25px; color: white;
@@ -237,7 +248,7 @@
 
     <div class="notice-board">
         <marquee scrollamount="6">
-            🎉 আনন্দের সাথে জানাচ্ছি যে, **Royal Cart BD**-র প্রতিটি সেক্টরেই ঈদের একদম নতুন এবং এক্সক্লুসিভ কালেকশন যুক্ত করা হয়েছে। &nbsp;&nbsp;&nbsp;&nbsp; 🛍️ শুভ শপিং!
+            🎉 আনন্দের সাথে জানাচ্ছি যে, **Royal Cart BD**-র প্রতিটি সেক্টরেই ঈদের একদম নতুন এবং এক্সক্লুসিভ কালেকশন যুক্ত করা হয়েছে। &nbsp;&nbsp;&nbsp;&nbsp; 🛍️ শুভ শপিং!
         </marquee>
     </div>
 
@@ -245,7 +256,7 @@
         <div class="container">
             <div class="fraud-warning animate__animated animate__shakeX">
                 <h3><i class="fas fa-exclamation-triangle"></i> সর্তকতা ও আইনি নোটিশ</h3>
-                <p>অহেতুক অর্ডার করে পণ্য ডেলিভারি না নেওয়া, ফোন বন্ধ করে রাখা কিংবা ডেলিভারি ম্যানের সাথে অশুভ আচরণ করা আইনত দণ্ডনীয় অপরাধ। যারা ফেক অর্ডার দিয়ে আমাদের ব্যবসায়িক ক্ষতি করার চেষ্টা করবেন, তাদের বিরুদ্ধে ডিজিটাল নিরাপত্তা আইন ও প্রচলিত আইনে কঠোর আইনি ব্যবস্থা গ্রহণ করা হবে।</p>
+                <p>অহেতুক অর্ডার করে পণ্য ডেলিভারি না নেওয়া, ফোন বন্ধ করে রাখা কিংবা ডেলিভারি ম্যানের সাথে অশুভ আচরণ করা আইনত দণ্ডনীয় অপরাধ। যারা ফেক অর্ডার দিয়ে আমাদের ব্যবসায়িক ক্ষতি করার চেষ্টা করবেন, তাদের বিরুদ্ধে ডিজিটাল নিরাপত্তা আইন ও প্রচলিত আইনে কঠোর আইনি ব্যবস্থা গ্রহণ করা হবে।</p>
               <div style="margin-top: 12px;">
     <a href="fraud-list.html" target="_blank"
        style="
@@ -289,8 +300,8 @@
                 <h3>📢 ডেলিভারি সংক্রান্ত তথ্য</h3>
                 <span class="charge-info">ঢাকার মধ্যে ডেলিভারি চার্জ ৳৫০ এবং সারা বাংলাদেশে ৳১০০</span>
                 <div class="order-box">
-                    <h4>পণ্যগুলোর দাম এবং অর্ডার করার নিয়ম জানতে:</h4>
-                    <p>আপনার পছন্দের পণ্যটির একটি স্ক্রিনশট (Screenshot) নিন এবং নিচের যেকোনো মাধ্যমে আমাদের ছবি পাঠিয়ে মেসেজ দিন।</p>
+                    <h4>পণ্যগুলোর দাম এবং অর্ডার করার নিয়ম জানতে:</h4>
+                    <p>আপনার পছন্দের পণ্যটির একটি স্ক্রিনশট (Screenshot) নিন এবং নিচের যেকোনো মাধ্যমে আমাদের ছবি পাঠিয়ে মেসেজ দিন।</p>
                     <div class="social-buttons">
                         <a href="https://api.whatsapp.com/send/?phone=8801906818233" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                         <a href="https://m.me/rafid23" target="_blank" class="social-btn messenger"><i class="fab fa-facebook-messenger"></i> Messenger</a>
@@ -310,14 +321,14 @@
             <div class="section-header">পোলো টি-শার্ট</div><div id="cat2" class="product-grid"></div><button id="btn-cat2" class="show-more-btn" style="display:none;" onclick="toggleSection('cat2')">আরও দেখুন</button>
             <div class="section-header">স্লিম ফিট টি-শার্ট</div><div id="cat3" class="product-grid"></div><button id="btn-cat3" class="show-more-btn" style="display:none;" onclick="toggleSection('cat3')">আরও দেখুন</button>
             <div class="section-header">কম্বো প্যাক</div><div id="cat4" class="product-grid"></div><button id="btn-cat4" class="show-more-btn" style="display:none;" onclick="toggleSection('cat4')">আরও দেখুন</button>
-            <div class="section-header">ছেলের ঘড়ি</div><div id="cat5" class="product-grid"></div><button id="btn-cat5" class="show-more-btn" style="display:none;" onclick="toggleSection('cat5')">আরও দেখুন</button>
+            <div class="section-header">ছেলের ঘড়ি</div><div id="cat5" class="product-grid"></div><button id="btn-cat5" class="show-more-btn" style="display:none;" onclick="toggleSection('cat5')">আরও দেখুন</button>
 
-            <div class="group-card">💃 মেয়েদের কালেকশন</div>
+            <div class="group-card">💃 মেয়েদের কালেকশন</div>
             <div class="section-header">থ্রি-পিস</div><div id="cat7" class="product-grid"></div><button id="btn-cat7" class="show-more-btn" style="display:none;" onclick="toggleSection('cat7')">আরও দেখুন</button>
             <div class="section-header">হ্যান্ডব্যাগ</div><div id="cat8" class="product-grid"></div><button id="btn-cat8" class="show-more-btn" style="display:none;" onclick="toggleSection('cat8')">আরও দেখুন</button>
-            <div class="section-header">মেয়েদের ঘড়ি</div><div id="cat9" class="product-grid"></div><button id="btn-cat9" class="show-more-btn" style="display:none;" onclick="toggleSection('cat9')">আরও দেখুন</button>
-            <div class="section-header">মেয়েদের কম্বো</div><div id="cat10" class="product-grid"></div><button id="btn-cat10" class="show-more-btn" style="display:none;" onclick="toggleSection('cat10')">আরও দেখুন</button>
-            <div class="section-header">শাড়ি</div><div id="cat11" class="product-grid"></div><button id="btn-cat11" class="show-more-btn" style="display:none;" onclick="toggleSection('cat11')">আরও দেখুন</button>
+            <div class="section-header">মেয়েদের ঘড়ি</div><div id="cat9" class="product-grid"></div><button id="btn-cat9" class="show-more-btn" style="display:none;" onclick="toggleSection('cat9')">আরও দেখুন</button>
+            <div class="section-header">মেয়েদের কম্বো</div><div id="cat10" class="product-grid"></div><button id="btn-cat10" class="show-more-btn" style="display:none;" onclick="toggleSection('cat10')">আরও দেখুন</button>
+            <div class="section-header">শাড়ি</div><div id="cat11" class="product-grid"></div><button id="btn-cat11" class="show-more-btn" style="display:none;" onclick="toggleSection('cat11')">আরও দেখুন</button>
 
             <div class="group-card">🧸 বাচ্চাদের সেকশন</div>
             <div class="section-header">বাচ্চাদের খেলনা</div><div id="cat6" class="product-grid"></div><button id="btn-cat6" class="show-more-btn" style="display:none;" onclick="toggleSection('cat6')">আরও দেখুন</button>
@@ -368,50 +379,66 @@
             });
         }
 
+        // অপটিমাইজেশন: renderData ফাংশন আলাদা করা হয়েছে 
+        function renderData(data) {
+            Object.keys(data).forEach(key => {
+                const grid = document.getElementById(key);
+                const btn = document.getElementById('btn-' + key);
+                if (!grid) return;
+                
+                let gridHtml = "";
+                data[key].forEach((item, index) => {
+                    const thumb = `https://drive.google.com/thumbnail?id=${item.id}&sz=w800`;
+                    const isExtra = index >= 4;
+                    const displayStyle = isExtra ? 'none' : 'block';
+                    const extraClass = isExtra ? 'extra-item' : '';
+                    
+                    if (item.type.includes("image")) {
+                        gridHtml += `<div class="card ${extraClass}" style="display:${displayStyle}" onclick="openLightbox('${thumb}')">
+                            <div class="preview-box">
+                                <img src="${thumb}" loading="lazy" alt="Product">
+                            </div>
+                        </div>`;
+                    } else {
+                        const videoUrl = `https://drive.google.com/uc?export=download&id=${item.id}`;
+                        gridHtml += `<div class="card ${extraClass}" style="display:${displayStyle}">
+                            <div class="preview-box" onclick="playVideo(this)">
+                                <div class="video-overlay">▶</div>
+                                <img src="${thumb}" loading="lazy">
+                                <video controls preload="none"><source src="${videoUrl}" type="${item.type}"></video>
+                            </div>
+                        </div>`;
+                    }
+                });
+                
+                grid.innerHTML = gridHtml;
+                if (data[key].length > 4 && btn) btn.style.display = "block";
+            });
+            
+            const loaderElement = document.getElementById('loading-box');
+            if(loaderElement) loaderElement.remove();
+        }
+
+        // অপটিমাইজেশন: sessionStorage ব্যবহার করা হয়েছে রিলোড এড়াতে
         async function loadData() {
             try {
+                const cachedData = sessionStorage.getItem('royalCart_Data');
+                if (cachedData) {
+                    renderData(JSON.parse(cachedData));
+                    return;
+                }
+
                 const response = await fetch(webAppUrl);
                 const data = await response.json();
                 
-                Object.keys(data).forEach(key => {
-                    const grid = document.getElementById(key);
-                    const btn = document.getElementById('btn-' + key);
-                    if (!grid) return;
-                    
-                    let gridHtml = "";
-                    data[key].forEach((item, index) => {
-                        const thumb = `https://drive.google.com/thumbnail?id=${item.id}&sz=w800`;
-                        const isExtra = index >= 4;
-                        const displayStyle = isExtra ? 'none' : 'block';
-                        const extraClass = isExtra ? 'extra-item' : '';
-                        
-                        if (item.type.includes("image")) {
-                            gridHtml += `<div class="card ${extraClass}" style="display:${displayStyle}" onclick="openLightbox('${thumb}')">
-                                <div class="preview-box">
-                                    <img src="${thumb}" loading="lazy" alt="Product">
-                                </div>
-                            </div>`;
-                        } else {
-                            const videoUrl = `https://drive.google.com/uc?export=download&id=${item.id}`;
-                            gridHtml += `<div class="card ${extraClass}" style="display:${displayStyle}">
-                                <div class="preview-box" onclick="playVideo(this)">
-                                    <div class="video-overlay">▶</div>
-                                    <img src="${thumb}" loading="lazy">
-                                    <video controls preload="none"><source src="${videoUrl}" type="${item.type}"></video>
-                                </div>
-                            </div>`;
-                        }
-                    });
-                    
-                    grid.innerHTML = gridHtml;
-                    if (data[key].length > 4 && btn) btn.style.display = "block";
-                });
-                
-                document.getElementById('loading-box').remove();
+                // ডেটা সেভ করে রাখা হচ্ছে যাতে ব্যাক করলে রিলোড না নেয়
+                sessionStorage.setItem('royalCart_Data', JSON.stringify(data));
+                renderData(data);
 
             } catch (e) { 
                 console.error("Error loading data:", e); 
-                document.getElementById('loading-box').innerHTML = "সমস্যা হয়েছে, পুনরায় চেষ্টা করুন।";
+                const loaderElement = document.getElementById('loading-box');
+                if(loaderElement) loaderElement.innerHTML = "সমস্যা হয়েছে, পুনরায় চেষ্টা করুন।";
             }
         }
 
@@ -455,7 +482,11 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             history.pushState(null, null, window.location.pathname);
-            createSkeletons();
+            
+            // ক্যাশ ডেটা থাকলে স্কেলেটন দেখানোর প্রয়োজন নেই
+            if (!sessionStorage.getItem('royalCart_Data')) {
+                createSkeletons();
+            }
             loadData();
         });
     </script>
